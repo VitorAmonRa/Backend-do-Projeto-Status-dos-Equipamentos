@@ -5,7 +5,7 @@ import { ListEquipmentsController } from "./controllers/ListEquipmentsController
 import { DeleteEquipmentsController } from "./controllers/DeleteEquipmentsController";
 
 export async function routes(fastify:FastifyInstance, options:FastifyPluginOptions) {
-    fastify.get("/equipments",async (request:FastifyRequest, reply:FastifyReply) => {
+    fastify.get("/allequipments",async (request:FastifyRequest, reply:FastifyReply) => {
         return new ListEquipmentsController().handle(request,reply)
     })
     fastify.post("/equipments",async (request:FastifyRequest, reply:FastifyReply) => {
